@@ -8,11 +8,12 @@ FizzBuzz is a common developer interview question for novice developers. The rul
 For just about 99% of you, this sounds super simple (as it should be). However, I was curious, how can we make it run as fast as posible, using high performance python optimizations, and after many experimentation, I came up with the following in Python, the language I have been using the most profesionally.This can serve as a simple introduction to high performance programming, because for many of us - a millisecond can make all the difference in the world. 
 
 ## Running Fastest Fizzbuzz
-For now, to run the fastest FizzBuzz, just run it like a normal python script
+To run Fastest FizzBuzz - run it from your favorite command line utility:
 ```
-python fastestfizzbuzz.py
+python fizzbuzz.py [-n <numberofruns>] [-q]
 ```
-To adjust the number of iterations, as well as turning printing off and on - you will have to adjust/comment the appropriate values in the code.
+-n <numberofruns> - optional positive integer value - the amount of times to run the fizbuzz command. Defaults to 1
+-q - Flag to run the fizzbuzz function in quiet mode (Without the output as described above) - used to test speed differences that would be hard to measure with string display, etc.
 
 ## Notes
 1. The biggest time saver was with string processing. Instead of constantly printing or appending strings, we create an array of strings, join it with a newline and print it at the very end of the function call.
@@ -21,7 +22,6 @@ To adjust the number of iterations, as well as turning printing off and on - you
 
 
 ### TODO
-* provide command line arguments to set iteration number and printing option
 * provide refernence and explanation to more "speed tricks" and why some, like mapping arrays, etc, were not used here.
 * create similar projects in other languages. 
 * try to make this darn thing even faster
